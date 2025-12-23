@@ -44,7 +44,7 @@ def rag_chat(query):
     context = "\n".join([doc.page_content for doc in docs])
 
     # 构造 Prompt
-    prompt = f"你是一个南航自动化学院的助教。请根据以下参考资料回答问题。\n参考资料：\n{context}\n问题：{query}"
+    prompt = f"你是一个南航航天学院的助教。请根据以下参考资料回答问题。\n参考资料：\n{context}\n问题：{query}"
     messages = [{"role": "user", "content": prompt}]
     text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     model_inputs = tokenizer([text], return_tensors="pt").to(DEVICE)
