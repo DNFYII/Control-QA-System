@@ -19,3 +19,4 @@
 ### 依赖安装
 ```bash
 pip install langchain transformers faiss-cpu sentence-transformers
+
